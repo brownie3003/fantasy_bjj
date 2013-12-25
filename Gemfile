@@ -17,11 +17,19 @@ group :test do
     gem 'growl', '1.0.3'
 end
 
-# Use Slim for templating
-gem 'slim-rails' 
+# Use haml for templating
+gem 'haml-rails' 
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
+
+# Fucking Love Bootstrap
+gem 'anjlab-bootstrap-rails',   :require => 'bootstrap-rails',
+                                :github => 'anjlab/bootstrap-rails',
+                                :branch => '3.0.0'
+
+# Have to specify this gem because it's fucking impossible to install nokogiri on machine.
+gem 'nokogiri', '1.6.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
