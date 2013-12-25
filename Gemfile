@@ -17,6 +17,10 @@ group :test do
     gem 'growl', '1.0.3'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
 # Use haml for templating
 gem 'haml-rails' 
 
