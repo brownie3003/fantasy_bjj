@@ -3,12 +3,14 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-gem 'pg', '0.15.1'
+# bcrypt for passwords
+gem "bcrypt-ruby"
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
     gem 'rspec-rails', '2.13.1'
     gem 'guard-rspec', '2.5.0'
+    gem 'sqlite3'
 end
 
 group :test do
@@ -19,6 +21,7 @@ end
 
 group :production do
   gem 'rails_12factor'
+  gem 'pg', '0.17.1'
 end
 
 # Use haml for templating
