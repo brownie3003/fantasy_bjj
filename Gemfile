@@ -32,9 +32,7 @@ gem 'haml-rails'
 gem 'sass-rails', '~> 4.0.0'
 
 # Fucking Love Bootstrap
-gem 'anjlab-bootstrap-rails',   :require => 'bootstrap-rails',
-                                :github => 'anjlab/bootstrap-rails',
-                                :branch => '3.0.0'
+gem 'bootstrap-sass', '~> 3.0.3.0'
 
 # Have to specify this gem because it's fucking impossible to install nokogiri on machine.
 gem 'nokogiri', '1.6.0'
