@@ -3,3 +3,5 @@
 %h3
     = gravatar_for @user
     = @user.name
+
+= link_to "Edit Profile", edit_user_path(@user)
