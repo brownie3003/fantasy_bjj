@@ -1,5 +1,7 @@
 FantasyBjj::Application.routes.draw do
 	resources :users
+	resources :fighters
+	resources :teams
 	resources :sessions, only: [:new, :create, :destroy]
 
 	match '/signup',	to: 'users#new',			via: 'get'

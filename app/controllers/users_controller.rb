@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     def create
         @user = User.new(user_params)
         if @user.save
+            @user.team = Team.create
             sign_in @user
             flash[:success] = 'Welcome to fantasy BJJ. Osss'
             redirect_to @user
@@ -46,7 +47,10 @@ class UsersController < ApplicationController
         # Before filters
 
         def signed_in_user
-            redirect_to signin_url, notice: "Please sign in." unless signed_in?
+            unless signed_in?
+                store_loaction
+                redirect_to signin_url, notice: "Please sign in."
+            end
         end
 
         def correct_user

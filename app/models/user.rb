@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+    has_one :team
     before_save { self.email = email.downcase }
     before_create :create_remember_token
     VALID_USERNAME_REGEX = /\A[a-zA-Z0-9_]*[a-zA-Z][a-zA-Z0-9_]*\z/

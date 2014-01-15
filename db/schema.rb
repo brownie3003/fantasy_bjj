@@ -11,7 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140105043431) do
+ActiveRecord::Schema.define(version: 20140115155519) do
+
+  create_table "fighters", force: true do |t|
+    t.string   "name"
+    t.string   "nickname"
+    t.string   "weight"
+    t.date     "date_of_birth"
+    t.string   "team_affiliation"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "teams", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "rooster_fighter_id"
+    t.integer  "light_feather_fighter_id"
+    t.integer  "feather_fighter_id"
+    t.integer  "light_fighter_id"
+    t.integer  "medium_fighter_id"
+    t.integer  "medium_heavy_fighter_id"
+    t.integer  "heavy_fighter_id"
+    t.integer  "super_heavy_fighter_id"
+    t.integer  "ultra_heavy_fighter_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"

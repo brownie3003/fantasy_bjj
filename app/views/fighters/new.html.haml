@@ -1,0 +1,24 @@
+- provide(:title, "New Fighter")
+%h1 Add a fighter to the database
+
+.row
+    .col-md-6.col-md-offset-3
+        = form_for(@fighter) do |f|
+            = render 'shared/error_messages_fighter'
+
+            = f.label :name
+            = f.text_field :name
+
+            = f.label :nickname
+            = f.text_field :nickname
+
+            = f.label :weight
+            = f.select :weight, ["Rooster (57.5kg)", "Light Feather (64kg)", "Feather (70kg", "Light (76kg)", "Medium (82.3kg)", "Medium Heavy (88.3kg)", "Heavy (94.3kg)", "Super Heavy (100.5kg)", "Ultra Heavy"]
+
+            = f.label :date_of_birth
+            = f.date_field :date_of_birth
+
+            = f.label :team_affiliation
+            = f.text_field :team_affiliation
+
+            = f.submit "Add Fighter", class: "btn btn-large btn-primary"
