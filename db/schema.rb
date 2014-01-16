@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20140115155519) do
     t.integer  "light_feather_fighter_id"
     t.integer  "feather_fighter_id"
     t.integer  "light_fighter_id"
-    t.integer  "medium_fighter_id"
+    t.integer  "middle_fighter_id"
     t.integer  "medium_heavy_fighter_id"
     t.integer  "heavy_fighter_id"
     t.integer  "super_heavy_fighter_id"
