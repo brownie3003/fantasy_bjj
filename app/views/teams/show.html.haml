@@ -5,11 +5,17 @@
         .col-md-3
         .col-md-9
             %h3 Rooster (57.5kg)
-            = Fighter.find_by(id: @user.team.rooster_fighter_id).name
+            - @rooster = Fighter.find_by(id: @user.team.rooster_fighter_id)
+            - unless @rooster.nil?
+                = @rooster.name
             %h3 Light Feather (64kg)
-            = @user.team.light_feather_fighter_id
+            - @light_feather = Fighter.find_by(id: @user.team.light_feather_fighter_id)
+            - unless @light_feather.nil?
+                = @light_feather.name
             %h3 Feather (70kg)
-            = @user.team.feather_fighter_id
+            - @feather = Fighter.find_by(id: @user.team.feather_fighter_id)
+            - unless @feather.nil?
+                = @feather.name
             %h3 Light (76kg)
             = @user.team.light_fighter_id
             %h3 Middle (82.3kg)
