@@ -17,16 +17,28 @@
             - unless @feather.nil?
                 = @feather.name
             %h3 Light (76kg)
-            = @user.team.light_fighter_id
+            - @light = Fighter.find_by(id: @user.team.light_fighter_id)
+            - unless @light.nil?
+                = @light.name
             %h3 Middle (82.3kg)
-            = @user.team.middle_fighter_id
+            - @middle = Fighter.find_by(id: @user.team.middle_fighter_id)
+            - unless @middle.nil?
+                = @middle.name
             %h3 Medium Heavy (88.3kg)
-            = @user.team.medium_heavy_fighter_id
+            - @medium_heavy = Fighter.find_by(id: @user.team.medium_heavy_fighter_id)
+            - unless @medium_heavy.nil?
+                = @medium_heavy.name
             %h3 Heavy (94.3kg)
-            = @user.team.heavy_fighter_id
+            - @heavy = Fighter.find_by(id: @user.team.heavy_fighter_id)
+            - unless @heavy.nil?
+                = @heavy.name
             %h3 Super Heavy (100.5kg)
-            = @user.team.super_heavy_fighter_id
+            - @super_heavy = Fighter.find_by(id: @user.team.super_heavy_fighter_id)
+            - unless @super_heavy.nil?
+                = @super_heavy.name
             %h3 Ultra Heavy
-            = @user.team.ultra_heavy_fighter_id
+            - @ultra_heavy = Fighter.find_by(id: @user.team.ultra_heavy_fighter_id)
+            - unless @ultra_heavy.nil?
+                = @ultra_heavy.name
 
             = link_to "Change Team", edit_team_path, class: "btn btn-large btn-primary"
