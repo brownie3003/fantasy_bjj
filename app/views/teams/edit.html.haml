@@ -8,20 +8,20 @@
                 %h3 Rooster (57.5kg)
                 = f.collection_select(:rooster_fighter_id, Fighter.where(weight: "Rooster (57.5kg)"), :id, :name)
                 %h3 Light Feather (64kg)
-                = @user.team.light_feather_fighter_id
+                = f.collection_select(:light_feather_fighter_id, Fighter.where(weight: "Light Feather (64kg)"), :id, :name)
                 %h3 Feather (70kg)
-                = @user.team.feather_fighter_id
+                = f.collection_select(:feather_fighter_id, Fighter.where(weight: "Feather (70kg)"), :id, :name)
                 %h3 Light (76kg)
-                = @user.team.light_fighter_id
+                = f.collection_select(:light_fighter_id, Fighter.where(weight: "Light (76kg)"), :id, :name)
                 %h3 Middle (82.3kg)
-                = @user.team.middle_fighter_id
+                = f.collection_select(:middle_fighter_id, Fighter.where(weight: "Middle (82.3kg)"), :id, :name)
                 %h3 Medium Heavy (88.3kg)
-                = @user.team.medium_heavy_fighter_id
+                = f.collection_select(:medium_heavy_fighter_id, Fighter.where(weight: "Medium Heavy (88.3kg)"), :id, :name)
                 %h3 Heavy (94.3kg)
-                = @user.team.heavy_fighter_id
+                = f.collection_select(:heavy_fighter_id, Fighter.where(weight: "Heavy (94.3kg)"), :id, :name)
                 %h3 Super Heavy (100.5kg)
-                = @user.team.super_heavy_fighter_id
+                = f.collection_select(:super_heavy_fighter_id, Fighter.where(weight: "Super Heavy (100.5kg)"), :id, :name)
                 %h3 Ultra Heavy
-                = @user.team.ultra_heavy_fighter_id
+                = f.collection_select(:ultra_heavy_fighter_id, Fighter.where(weight: "Ultra Heavy"), :id, :name)
 
                 = f.submit "Save changes", class: "btn btn-large btn-primary"
